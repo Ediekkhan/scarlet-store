@@ -11,6 +11,7 @@ import img4 from '../src/assets/img/image 12.png';
 import img5 from '../src/assets/img/image c cut.png';
 import img6 from '../src/assets/img/unsplash_MYbhN8KaaEc.png';
 import Footer from './components/Footer';
+import CheckoutPage from './components/CheckoutPage';
 
 interface Product {
   id: number;
@@ -92,6 +93,9 @@ const App: React.FC = () => {
               </div>
             }
           />
+
+            <Route path="/checkout" element={<CheckoutPage cartItems={cart} />} />
+
         </Routes>
 
         

@@ -1,5 +1,6 @@
 import React from 'react';
-import ProductCard from './ProductCard';
+// import ProductCard from './ProductCard';
+import ProductCard from '../utils/libs/ProductCard';
 
 interface Product {
   id: number;
