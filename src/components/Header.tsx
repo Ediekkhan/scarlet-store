@@ -1,38 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart, FaBars, FaDesktop, FaMobileAlt } from 'react-icons/fa';
+import { FaShoppingCart, FaDesktop, FaMobileAlt } from 'react-icons/fa';
 
 const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="bg-white text-black p-6">
-      <div className=" mx-auto justify-between  flex px-4">
-        <div className="flex justify-start ">
-          <div className="text-2xl font-bold">SCARLET STORE</div>
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="md:hidden flex items-center">
+          <button onClick={toggleMenu} className="focus:outline-none mr-4">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={isMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+              ></path>
+            </svg>
+          </button>
+          <Link to="/" className="text-sm lg:text-2xl font-bold">
+            SCARLET STORE
+          </Link>
         </div>
 
-        <div  className="flex items-center  space-x-4">
+        <div className="hidden md:flex items-center">
+          <Link to="/" className="text-sm lg:text-2xl font-bold">
+            SCARLET STORE
+          </Link>
+        </div>
 
-            <nav className="hidden md:flex  space-x-4">
-                <Link to="/" className="text-[#D95F27]">Home</Link>
-                <Link to="/products" className="hover:text-[#D95F27] text-[#919191]">Products</Link>
-                <Link to="/contact" className="hover:text-[#D95F27] text-[#919191]">Contact Us</Link>
-            </nav>
-            <div className="md:hidden">
-                <FaBars className="text-xl cursor-pointer" />
-            </div>
+        <div className="hidden md:flex items-center space-x-8">
+          <nav className="flex items-center space-x-8">
+            <Link to="/" className="text-[#D95F27]">Home</Link>
+            <Link to="/products" className="hover:text-[#D95F27] text-[#919191]">Products</Link>
+            <Link to="/contact" className="hover:text-[#D95F27] text-[#919191]">Contact Us</Link>
+          </nav>
 
-            <Link to="/cart">
+          <Link to="/cart">
             <FaShoppingCart className="text-2xl cursor-pointer" />
           </Link>
-
         </div>
 
-        <div className="flex items-center justify-end space-x-4">
-          <FaDesktop className="hidden md:block text-xl cursor-pointer" />
-          <FaMobileAlt className=" text-xl cursor-pointer" />
-          
+        <div className="hidden md:flex items-center justify-end space-x-4">
+          <FaDesktop className="text-xl cursor-pointer" />
+          <FaMobileAlt className="text-xl cursor-pointer" />
         </div>
       </div>
+
+      {isMenuOpen && (
+        <div className="md:hidden mt-4">
+          <nav className="flex flex-col items-start space-y-4">
+            <Link to="/" className="text-[#D95F27] block">Home</Link>
+            <Link to="/products" className="hover:text-[#D95F27] block text-[#919191]">Products</Link>
+            <Link to="/contact" className="hover:text-[#D95F27] block text-[#919191]">Contact Us</Link>
+            <Link to="/cart" className="mt-4">
+              <FaShoppingCart className="text-2xl cursor-pointer" />
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
