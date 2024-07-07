@@ -29,12 +29,12 @@ const Home: React.FC<HomeProps> = ({ products, addToCart }) => {
         </div>
       </div>
 
-      <section className="w-auto m-4">
+      <section className="w-auto m-4 ">
         <h1 className="text-4xl font-bold text-left m-8">COLLECTION</h1>
         <div className="flex flex-col md:flex-row">
           <div className="m-4 w-full md:w-1/2 flex">
-            <div className="relative">
-              <img src={full} alt="full" className="h-auto object-contain" />
+            <div className="relative mb-4">
+              <img src={full} alt="full" className="h-auto w-80 lg:w-auto object-contain" />
               <div className="absolute bottom-4 left-4 text-left py-3 pr-20 pl-3 bg-white bg-opacity-75 text-black rounded">
                 <p className='text-gray-700'>NEW IN</p>
                 <h3 className='text-black'>BODY CONS</h3>
@@ -45,16 +45,16 @@ const Home: React.FC<HomeProps> = ({ products, addToCart }) => {
 
           <div className="m-4 w-full md:w-1/2">
             <div className="relative mb-4">
-              <img src={hal1} alt="hal1" className="h-auto w-full object-contain" />
-              <div className="absolute bottom-4 left-4 text-left py-3 pr-20 pl-3 bg-white bg-opacity-75 text-black rounded">
+              <img src={hal1} alt="hal1" className="lg:h-[370px] h-auto w-80 lg:w-full object-contain" />
+              <div className="absolute bottom-4  left-4 lg:left-24 text-left ml-35 py-3 pr-20 pl-3 bg-white bg-opacity-75 text-black rounded">
                 <p className='text-gray-700'>NEW IN</p>
                 <h3 className='text-black'>BODY CONS</h3>
                 <p className='underline text-[#D95F27] underline-offset-1'>show now</p>
               </div>
             </div>
             <div className="relative">
-              <img src={hal2} alt="hal2" className="h-auto w-full object-contain" />
-              <div className="absolute bottom-4 left-4 text-left py-3 pr-20 pl-3 bg-white bg-opacity-75 text-black rounded">
+              <img src={hal2} alt="hal2" className="lg:h-[370px] h-auto w-80 lg:w-full object-contain" />
+              <div className="absolute bottom-4  left-4 lg:left-24 text-left ml-35 py-3 pr-20 pl-3 bg-white bg-opacity-75 text-black rounded">
                 <p className='text-gray-700'>NEW IN</p>
                 <h3 className='text-black'>BODY CONS</h3>
                 <p className='underline text-[#D95F27] underline-offset-1'>show now</p>

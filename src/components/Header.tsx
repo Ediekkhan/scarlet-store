@@ -13,9 +13,9 @@ const Header: React.FC = () => {
         <div  className="flex items-center  space-x-4">
 
             <nav className="hidden md:flex  space-x-4">
-                <Link to="/" className="hover:text-[#D95F27]">Home</Link>
-                <Link to="/products" className="hover:text-[#D95F27]">Products</Link>
-                <Link to="/contact" className="hover:text-[#D95F27]">Contact Us</Link>
+                <Link to="/" className="text-[#D95F27]">Home</Link>
+                <Link to="/products" className="hover:text-[#D95F27] text-[#919191]">Products</Link>
+                <Link to="/contact" className="hover:text-[#D95F27] text-[#919191]">Contact Us</Link>
             </nav>
             <div className="md:hidden">
                 <FaBars className="text-xl cursor-pointer" />
