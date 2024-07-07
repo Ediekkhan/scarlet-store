@@ -5,7 +5,7 @@ import { FaShoppingCart, FaBars, FaDesktop, FaMobileAlt } from 'react-icons/fa';
 const Header: React.FC = () => {
   return (
     <header className="bg-white text-black p-6">
-      <div className=" mx-auto justify-between flex px-4">
+      <div className=" mx-auto justify-between  flex px-4">
         <div className="flex justify-start ">
           <div className="text-2xl font-bold">SCARLET STORE</div>
         </div>

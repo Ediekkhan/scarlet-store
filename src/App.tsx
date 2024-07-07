@@ -10,6 +10,7 @@ import img3 from '../src/assets/img/image 12-3.png';
 import img4 from '../src/assets/img/image 12.png';
 import img5 from '../src/assets/img/image c cut.png';
 import img6 from '../src/assets/img/unsplash_MYbhN8KaaEc.png';
+import Footer from './components/Footer';
 
 interface Product {
   id: number;
@@ -48,7 +49,7 @@ const App: React.FC = () => {
             element={
               <div>
                 <Home products={products} addToCart={addToCart} />
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center mt-20">
                   <button className="text-black border border-black rounded-xl px-4 py-2">See More</button>
                 </div>
 
@@ -72,6 +73,7 @@ const App: React.FC = () => {
           />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 };
