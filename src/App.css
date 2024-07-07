@@ -24,6 +24,27 @@
   color: white;
 }
 
+
+.custom-line-through {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-line-through::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: red; 
+  top: 50%;
+  /* border: #b91c1c; */
+  transform: translateY(-50%);
+  z-index: 1;
+  /* opacity: 50%; */
+}
+
+
 .App-link {
   color: #61dafb;
 }

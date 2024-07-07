@@ -25,12 +25,12 @@ const App: React.FC = () => {
 
 
   const products: Product[] = [
-    { id: 1, name: 'Product 1', price: 19.99, image: img1 },
-    { id: 2, name: 'Product 2', price: 29.99, image: img2 },
-    { id: 3, name: 'Product 3', price: 39.99, image: img3 },
-    { id: 4, name: 'Product 4', price: 49.99, image: img4 },
-    { id: 5, name: 'Product 5', price: 49.99, image: img5 },
-    { id: 6, name: 'Product 6', price: 49.99, image: img6 },
+    { id: 1, name: 'Cargo Pant', price: 1900, image: img1 },
+    { id: 2, name: 'Gajio Jumper Pants', price: 2990, image: img2 },
+    { id: 3, name: 'Product 3', price: 3500, image: img3 },
+    { id: 4, name: 'Product 4', price: 4590, image: img4 },
+    { id: 5, name: 'Product 5', price: 4590, image: img5 },
+    { id: 6, name: 'Product 6', price: 4590, image: img6 },
   ];
 
   const addToCart = (product: Product) => {
@@ -52,7 +52,7 @@ const App: React.FC = () => {
           <Route
             path="/"
             element={
-              <div>
+              <div >
                 <Home products={products} addToCart={addToCart} />
                 <div className="flex justify-center mt-20">
                   <button className="text-black border border-black rounded-xl px-4 py-2">See More</button>
