@@ -21,6 +21,8 @@ interface Product {
 
 const App: React.FC = () => {
   const [cart, setCart] = useState<Product[]>([]);
+  const [searchQuery, setSearchQuery] = useState<string>('');
+
 
   const products: Product[] = [
     { id: 1, name: 'Product 1', price: 19.99, image: img1 },
@@ -38,6 +40,9 @@ const App: React.FC = () => {
   const removeFromCart = (product: Product) => {
     setCart(cart.filter(item => item.id !== product.id));
   };
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
 
   return (
     <Router>
@@ -54,7 +59,7 @@ const App: React.FC = () => {
                 </div>
 
                 <h1 className="text-3xl font-bold mt-14 m-8 text-left">FEATURED</h1>
-                <ProductList products={products} addToCart={addToCart} />
+                <ProductList products={products} addToCart={addToCart} searchQuery={searchQuery} />
                 
               </div>
             }
@@ -68,7 +73,23 @@ const App: React.FC = () => {
           <Route
             path="/products"
             element={
-              <ProductList products={products} addToCart={addToCart} />
+              <div>
+                
+                
+                <div className="mb-4  ml-4 flex justify-start">
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={handleSearch}
+                    placeholder="Search ..."
+                    className="border rounded px-4 m-2 py-2 w-1/2"
+                  />
+                  <button className="bg-[#D95F27] text-white  m-2 px-4 py-2 rounded">Search</button>
+                </div>
+
+                <ProductList products={products} addToCart={addToCart} searchQuery={searchQuery} />
+
+              </div>
             }
           />
         </Routes>

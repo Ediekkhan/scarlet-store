@@ -11,12 +11,17 @@ interface Product {
 interface ProductListProps {
   products: Product[];
   addToCart: (product: Product) => void;
+  searchQuery: string;
 }
 
-const ProductList: React.FC<ProductListProps> = ({ products, addToCart }) => {
+const ProductList: React.FC<ProductListProps> = ({ products, addToCart, searchQuery }) => {
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="mt-8 m-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 ">
-      {products.map(product => (
+      {filteredProducts.map(product => (
         <ProductCard key={product.id} product={product} addToCart={addToCart} />
       ))}
     </div>
