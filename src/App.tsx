@@ -59,9 +59,11 @@ const App: React.FC = () => {
                   <button className="text-black border border-black rounded-xl px-4 py-2">See More</button>
                 </div>
 
-                <h1 className="text-3xl font-bold mt-14 m-8 text-left">FEATURED</h1>
-                <ProductList products={products} addToCart={addToCart} searchQuery={searchQuery} />
+                  <div className=' mx-12'> 
+                  <h1 className="text-3xl font-bold mt-14  text-left">FEATURED</h1>
+                  <ProductList products={products} addToCart={addToCart} searchQuery={searchQuery} />
                 
+                  </div>
               </div>
             }
           />
