@@ -72,7 +72,7 @@ const Home: React.FC<HomeProps> = ({ products, addToCart }) => {
         <h1 className="text-4xl font-bold text-left m-8">30% DISCOUNT DEALS</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {products.slice(0, 6).map((product) => (
-            <div key={product.id} className="border rounded-lg p-4 shadow-md">
+            <div key={product.id} className="rounded-lg p-4 ">
               <img src={product.image} alt={product.name} className="h-64 w-full  mb-4" />
               <div className="bottom-4 left-4 text-left py-3 bg-white bg-opacity-75 text-black rounded">
                 <h3 className="text-[#1E1E1E]">{product.name}</h3>

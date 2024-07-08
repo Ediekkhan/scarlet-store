@@ -18,12 +18,12 @@ interface Product {
   name: string;
   price: number;
   image: string;
+  // quantity?: number;
 }
 
 const App: React.FC = () => {
   const [cart, setCart] = useState<Product[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');
-
 
   const products: Product[] = [
     { id: 1, name: 'Cargo Pant', price: 1900, image: img1 },
@@ -41,6 +41,11 @@ const App: React.FC = () => {
   const removeFromCart = (product: Product) => {
     setCart(cart.filter(item => item.id !== product.id));
   };
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
   };
@@ -53,54 +58,72 @@ const App: React.FC = () => {
           <Route
             path="/"
             element={
-              <div >
+              <div>
                 <Home products={products} addToCart={addToCart} />
                 <div className="flex justify-center mt-20">
                   <button className="text-black border border-black rounded-xl px-4 py-2">See More</button>
                 </div>
-
-                  <div className=' mx-12'> 
-                  <h1 className="text-3xl font-bold mt-14  text-left">FEATURED</h1>
+                <div className="mx-12">
+                  <h1 className="text-3xl font-bold mt-14 text-left">FEATURED</h1>
                   <ProductList products={products} addToCart={addToCart} searchQuery={searchQuery} />
-                
-                  </div>
+                </div>
               </div>
             }
           />
           <Route
             path="/cart"
             element={
-              <ShoppingCart cartItems={cart} removeFromCart={removeFromCart} />
+              <div >
+                <div className='flex items-center justify-between mx-32'>
+                <span className="flex items-center text-xl font-semibold z my-4">
+                  Product
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14 9.99998C14 10.5833 13.775 11.1667 13.3334 11.6083L7.90003 17.0417C7.65837 17.2833 7.25837 17.2833 7.0167 17.0417C6.77503 16.8 6.77503 16.4 7.0167 16.1583L12.45 10.725C12.85 10.325 12.85 9.67498 12.45 9.27498L7.0167 3.84165C6.77503 3.59999 6.77503 3.19998 7.0167 2.95832C7.25837 2.71665 7.65837 2.71665 7.90003 2.95832L13.3334 8.39165C13.775 8.83332 14 9.41665 14 9.99998Z"
+                      fill="#929292"
+                    />
+                  </svg>
+                  <span className="text-[#D95F27]">cart</span>
+
+                  
+                </span>
+
+                <div className=' items-end'>
+                  <button className="bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded " onClick={clearCart}>
+                     Clear Cart
+                  </button>
+                  </div>
+                </div>
+                <ShoppingCart cartItems={cart} removeFromCart={removeFromCart} clearCart={clearCart} />
+              </div>
             }
           />
           <Route
             path="/products"
             element={
               <div>
-                
-                
                 <div className="mb-4 md:ml-4 flex md:justify-start justify-center">
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={handleSearch}
                     placeholder="Search ..."
-                    className="border rounded px-4 m-2 py-2 w-1/2"
+                    className="border rounded px-4 m-2 py-2 w-2/5"
                   />
-                  <button className="bg-[#D95F27] text-white  m-2 px-4 py-2 rounded">Search</button>
+                  {/* <button className="bg-[#D95F27] text-white m-2 px-4 py-2 rounded">Search</button> */}
                 </div>
-
                 <ProductList products={products} addToCart={addToCart} searchQuery={searchQuery} />
-
               </div>
             }
           />
-
-            <Route path="/checkout" element={<CheckoutPage cartItems={cart} />} />
-
+          <Route path="/checkout" element={<CheckoutPage cartItems={cart} />} />
         </Routes>
-
-        
       </div>
       <Footer />
     </Router>

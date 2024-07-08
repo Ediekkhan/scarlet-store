@@ -30,7 +30,7 @@ const CartItem: React.FC<CartItemProps> = ({ product, removeFromCart, updateQuan
   };
 
   return (
-    <div className="flex items-center p-4 border-b border-gray-200">
+    <div className="flex items-center p-4 border-b  border-gray-200">
       <img src={product.image} alt={product.name} className="w-20 h-20 object-cover" />
       <div className="ml-4 flex-grow">
         <h2 className="text-lg font-bold">{product.name}</h2>
@@ -57,12 +57,12 @@ const CartItem: React.FC<CartItemProps> = ({ product, removeFromCart, updateQuan
         >
           +
         </button>
-        <button
+        {/* <button
           onClick={() => removeFromCart(product)}
           className="ml-4 bg-[#D95F27] text-white px-2 py-1 rounded hover:bg-[#b0542d]"
         >
           Remove
-        </button>
+        </button> */}
       </div>
     </div>
   );
