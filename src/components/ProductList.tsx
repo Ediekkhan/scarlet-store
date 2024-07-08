@@ -7,8 +7,6 @@ interface Product {
   name: string;
   price: number;
   image: string;
-  // addToCart: (product: Product) => void;
-  // description: string;
 
 }
 
