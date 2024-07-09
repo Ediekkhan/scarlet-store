@@ -95,9 +95,7 @@ const App: React.FC = () => {
                 </span>
 
                 <div className=' items-end'>
-                  <button className="bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded " onClick={clearCart}>
-                     Clear Cart
-                  </button>
+                  
                   </div>
                 </div>
                 <ShoppingCart cartItems={cart} removeFromCart={removeFromCart} clearCart={clearCart} />
