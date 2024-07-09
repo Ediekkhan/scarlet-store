@@ -123,7 +123,10 @@ const App: React.FC = () => {
                   />
                   {/* <button className="bg-[#D95F27] text-white m-2 px-4 py-2 rounded">Search</button> */}
                 </div>
-                <ProductList products={products} addToCart={addToCart} searchQuery={searchQuery} />
+                    <div className='p-4'>
+                    <ProductList  products={products} addToCart={addToCart} searchQuery={searchQuery} />
+
+                    </div>
               </div>
             }
           />

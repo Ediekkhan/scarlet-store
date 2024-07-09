@@ -17,7 +17,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
   return (
-    <div className="rounded-lg p-4 ">
+    <div className="rounded-lg  ">
       <img src={product.image} alt={product.name} className="w-full h-[380px] object-cover mb-4"/>
       <h2 className="text-lg font-bold mb-2 text-[#1E1E1E]">{product.name}</h2>
       <div className=' flex justify-between'>

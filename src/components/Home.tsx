@@ -47,7 +47,7 @@ const Home: React.FC<HomeProps> = ({ products, addToCart }) => {
             </div>
           </div>
 
-          <div className="m-4 w-full md:w-1/2">
+          <div className="lg:m-4  w-full md:w-1/2">
             <div className="relative mb-4">
               <img src={hal1} alt="hal1" className="lg:h-[364px] h-auto w-80 lg:w-full object-contain" />
               <div className="absolute bottom-4  left-4 lg:left-24 text-left ml-35 py-3 pr-20 pl-3 bg-white bg-opacity-75 text-black rounded">
@@ -71,10 +71,10 @@ const Home: React.FC<HomeProps> = ({ products, addToCart }) => {
       
 
       <section className="w-auto mx-12 my-4">
-        <h1 className="text-4xl font-bold text-left m-8">30% DISCOUNT DEALS</h1>
+        <h1 className="lg:text-4xl text-xl font-bold text-left lg:m-8 m-2 mt-8">30% DISCOUNT DEALS</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {products.slice(0, 6).map((product) => (
-            <div key={product.id} className="rounded-lg p-4 ">
+            <div key={product.id} >
               <img src={product.image} alt={product.name} className="h-64 w-full  mb-4" />
               <div className="bottom-4 left-4 text-left py-3 bg-white bg-opacity-75 text-black rounded">
                 <h3 className="text-[#1E1E1E]">{product.name}</h3>

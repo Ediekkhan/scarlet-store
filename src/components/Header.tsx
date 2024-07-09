@@ -34,14 +34,14 @@ const Header: React.FC = () => {
               ></path>
             </svg>
           </button>
-          <Link to="/" className="text-sm lg:text-2xl font-bold">
-          The Scarlet Store
+          <Link to="/" className="text-sm lg:text-2xl self-center ml-20 lg:ml-0  font-bold">
+          The Scarlet Store 
           </Link>
         </div>
 
         <div className="hidden md:flex items-center">
           <Link to="/" className="text-sm lg:text-2xl font-bold">
-            The Scarlet Store
+            The Scarlet Store 
           </Link>
         </div>
 
