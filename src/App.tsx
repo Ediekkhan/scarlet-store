@@ -12,6 +12,8 @@ import img5 from '../src/assets/img/image c cut.png';
 import img6 from '../src/assets/img/unsplash_MYbhN8KaaEc.png';
 import Footer from './components/Footer';
 import CheckoutPage from './components/CheckoutPage';
+import { Link } from 'react-router-dom';
+
 
 interface Product {
   id: number;
@@ -77,9 +79,13 @@ const App: React.FC = () => {
             path="/cart"
             element={
               <div >
-                <div className='flex items-center justify-between lg:mx-32 mx-5'>
+                <div className='flex items-center justify-between lg:mx-32 mx-2'>
                 <span className="flex items-center lg:text-xl  font-semibold  lg:my-4 my-2">
+                  <Link to="/products">
+                <button className="text-gray-400 ">
                   Product
+                </button>
+                  </Link>
                   <svg
                     width="20"
                     height="20"

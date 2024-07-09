@@ -47,7 +47,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems,removeFromCart,  
               </h1>
 
 
-              <button className=" text-[#D95F27] px-4 lg:py-2  p-1 rounded flex items-center" onClick={clearCart}>
+              <button className=" text-[#D95F27] px-2  lg:py-2  p-1 rounded flex items-center" onClick={clearCart}>
                   <span>
                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M21 6.72998C20.98 6.72998 20.95 6.72998 20.92 6.72998C15.63 6.19998 10.35 5.99998 5.12001 6.52998L3.08001 6.72998C2.66001 6.76998 2.29001 6.46998 2.25001 6.04998C2.21001 5.62998 2.51001 5.26998 2.92001 5.22998L4.96001 5.02998C10.28 4.48998 15.67 4.69998 21.07 5.22998C21.48 5.26998 21.78 5.63998 21.74 6.04998C21.71 6.43998 21.38 6.72998 21 6.72998Z" fill="#D95F27"/>
@@ -60,7 +60,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems,removeFromCart,  
                       
 
                   </span>
-                  <p className='mx-3 items-center justify-end '> Clear Cart</p>
+                  <p className=' items-center pl-1'> Clear Cart</p>
               </button>
 
             </div>
@@ -93,7 +93,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems,removeFromCart,  
             <div className='lg:text-2xl sm:text-sm'>
              
               <Link to="/checkout">
-                <button className="bg-[#D95F27] hover:bg-[#b24e20] text-white px-6 lg:py-2 lg:p-4 p-2 rounded-md lg:ml-2 items-center">
+                <button className="bg-[#D95F27] hover:bg-[#b24e20] lg:text-xl text-white px-6 lg:py-2 lg:p-4 p-2 rounded-md lg:ml-2 items-center">
                   Go to Checkout
                 </button>
               </Link>

@@ -83,7 +83,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmit }) => {
 
       <h2 className="text-xl font-bold mb-4 mx-2">Shipping Information</h2>
 
-      <div className=' flex justify-between '>
+      <div className=' lg:flex justify-between '>
       <div className="mb-4 mx-2 ">
         <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
           First Name
@@ -162,7 +162,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmit }) => {
 
       </div>
       
-      <div className='flex justify-between'>
+      <div className='lg:flex justify-between'>
           <div className="mb-4 mx-2">
         <label htmlFor="country" className="block text-sm font-medium text-gray-700">
           Country
@@ -205,13 +205,13 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmit }) => {
           name="address"
           value={formData.address}
           onChange={handleChange}
-          rows={3}
           className="mt-1 px-3 py-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#D95F27] focus:border-[#D95F27] sm:text-sm"
           required
         />
       </div>
       
-      <h2 className="text-xl font-bold mb-4 mx-2">Payment Information</h2>
+      <h2 className="lg:text-xl font-bold mb-2 mx-2">Payment Information</h2>
+      <p className="text-xs  mb-4 mx-2 text-gray-500">Enter your Visa or Mastercard details</p>
       <div className="mb-4 mx-2">
         <label htmlFor="cardHolderName" className="block text-sm font-medium text-gray-700">
           Card Holder Name
@@ -243,7 +243,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmit }) => {
         />
       </div>
       
-      <div className='flex justify-between'>
+      <div className='lg:flex justify-between'>
       <div className="mb-4 mx-2">
         <label htmlFor="cvv" className="block text-sm font-medium text-gray-700">
           CVV
@@ -278,7 +278,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onSubmit }) => {
       
       <button
         type="submit"
-        className="bg-[#D95F27] text-white w-full px-4 py-2 rounded hover:bg-[#D95F27]"
+        className="bg-[#D95F27] text-white w-full px-4 my-4 py-4 rounded text-md font-bold hover:bg-[#D95F27]"
       >
         Confrim Payment
       </button>

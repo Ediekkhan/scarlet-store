@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CartSummary from '../utils/libs/CartSummary';
 import CheckoutForm from './CheckoutForm';
+import { Link } from 'react-router-dom';
 
 
 interface Product {
@@ -44,10 +45,14 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ cartItems }) => {
   };
 
   return (
-    <div className="  mt-10 mx-24">
+    <div className="  lg:mt-10 mx-4 lg:mx-24">
 
-        <span className="flex items-center text-xl font-semibold z my-4">
-                            Product
+        <span className="flex items-center lg:text-xl md:text-base text-gray-500 pr-24 font-semibold lg:my-4">
+                          <Link to="/products">
+                        <button className="text-gray-400 ">
+                          Product
+                        </button>
+                          </Link>
                             <svg
                               width="20"
                               height="20"
@@ -60,7 +65,13 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ cartItems }) => {
                                 fill="#929292"
                               />
                             </svg>
-                            <span >cart</span>
+                            <span >
+                                  <Link to="/cart">
+                                <button className="text-gray-400 ">
+                                  cart
+                                </button>
+                                  </Link>
+                            </span>
                             <svg
                               width="20"
                               height="20"
@@ -80,11 +91,12 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ cartItems }) => {
                             
         </span>
 
-      <div className='flex justify-between'>
+      <div className='lg:flex justify-between'>
        
 
           <CheckoutForm onSubmit={handleSubmit} />
-
+<br />
+<br />
           
           <CartSummary
             cartItems={cartItems}
