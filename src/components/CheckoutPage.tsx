@@ -98,7 +98,7 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ cartItems }) => {
 <br />
 <br />
           
-          <CartSummary
+          <CartSummary 
             cartItems={cartItems}
             quantities={quantities}  
             removeFromCart={removeFromCart}  

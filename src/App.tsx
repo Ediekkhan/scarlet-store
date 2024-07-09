@@ -113,13 +113,13 @@ const App: React.FC = () => {
             path="/products"
             element={
               <div>
-                <div className="mb-4 md:ml-4 flex md:justify-start justify-center">
+                <div className="lg:mb-4 md:ml-4 md:justify-start justify-center mr-6 ml-2">
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={handleSearch}
                     placeholder="Search ..."
-                    className="border rounded px-4 m-2 py-2 w-2/5"
+                    className="border rounded px-4 m-2 py-2  lg:w-1/5 w-full justify-center"
                   />
                   {/* <button className="bg-[#D95F27] text-white m-2 px-4 py-2 rounded">Search</button> */}
                 </div>

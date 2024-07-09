@@ -35,7 +35,7 @@ const CartItem: React.FC<CartItemProps> = ({ product, removeFromCart, updateQuan
     <div className="flex items-center lg:p-4 pt-1 pb-1 border-b border-gray-200 ">
       <img src={product.image} alt={product.name} className="w-20 lg:h-20 h-32 rounded-lg object-cover" />
 
-      <div className=" sm:flex flex-row md:flex lg:flex items-center justify-between px-8 flex-grow">
+      <div className=" sm:flex flex-row md:flex lg:flex items-center justify-between lg:px-8 px-2 flex-grow">
         <h2 className="lg:text-lg font-semibold lg:px-2 items-center">{product.name}</h2>
 
         <div className=" flex items-center mt-2 lg:mx-2">

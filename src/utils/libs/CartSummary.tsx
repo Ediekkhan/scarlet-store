@@ -30,7 +30,7 @@ const CartSummary: React.FC<CartSummaryProps> = ({
   );
 
   return (
-    <div className="border rounded-lg p-4 shadow-md mb-6 h-min min-w-max">
+    <div className="border rounded-lg p-4 shadow-md mb-6 h-min lg:min-w-max">
       <h2 className="text-lg font-bold mb-4">Cart Summary</h2>
       {cartItems.length === 0 ? (
         <p className="text-gray-700">Your cart is empty.</p>
