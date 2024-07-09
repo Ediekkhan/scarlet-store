@@ -1,12 +1,14 @@
 import React from 'react';
 import CartItem from './CartItem';
-import naira from '../../assets/img/naira.svg'
+// import naira from '../../assets/img/naira.svg'
 
 interface Product {
   id: number;
   name: string;
   price: number;
   image: string;
+  color :string ;
+  size:string;
 }
 
 interface CartSummaryProps {

@@ -8,6 +8,8 @@ interface Product {
   name: string;
   price: number;
   image: string;
+  color :string ;
+  size:string;
 }
 
 interface CheckoutPageProps {
@@ -32,14 +34,16 @@ const CheckoutPage: React.FC<CheckoutPageProps> = ({ cartItems }) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-10">
+    <div className=" flex  mx-auto mt-10">
+      <CheckoutForm onSubmit={handleFormSubmit} />
+
+      
       <CartSummary
         cartItems={cartItems}
         quantities={quantities}  
         removeFromCart={removeFromCart}  
         updateQuantity={updateQuantity}  
       />
-      <CheckoutForm onSubmit={handleFormSubmit} />
     </div>
   );
 };

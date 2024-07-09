@@ -8,6 +8,8 @@ interface Product {
   price: number;
   image: string;
   quantity?: number;
+  color :string ;
+  size:string;
 }
 
 interface ShoppingCartProps {

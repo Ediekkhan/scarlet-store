@@ -5,7 +5,8 @@ interface Product {
   name: string;
   price: number;
   image: string;
-//   description: string;
+  color :string ;
+  size:string;
 
 }
 

@@ -19,6 +19,8 @@ interface Product {
   price: number;
   image: string;
   // quantity?: number;
+  color :string ;
+  size:string;
 }
 
 const App: React.FC = () => {
@@ -26,13 +28,14 @@ const App: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const products: Product[] = [
-    { id: 1, name: 'Cargo Pant', price: 1900, image: img1 },
-    { id: 2, name: 'Gajio Jumper Pants', price: 2990, image: img2 },
-    { id: 3, name: 'Product 3', price: 3500, image: img3 },
-    { id: 4, name: 'Product 4', price: 4590, image: img4 },
-    { id: 5, name: 'Product 5', price: 4590, image: img5 },
-    { id: 6, name: 'Product 6', price: 4590, image: img6 },
+    { id: 1, name: 'Cargo Pant', price: 1900, image: img1, color: 'Black', size: 'Medium' },
+    { id: 2, name: 'Gajio Jumper Pants', price: 2990, image: img2, color: 'Blue', size: 'Large' },
+    { id: 3, name: 'Product 3', price: 3500, image: img3, color: 'Red', size: 'Small' },
+    { id: 4, name: 'Product 4', price: 4590, image: img4, color: 'Green', size: 'Medium' },
+    { id: 5, name: 'Product 5', price: 4590, image: img5, color: 'Yellow', size: 'XLarge' },
+    { id: 6, name: 'Product 6', price: 4590, image: img6, color: 'White', size: 'Medium' },
   ];
+  
 
   const addToCart = (product: Product) => {
     setCart([...cart, product]);
