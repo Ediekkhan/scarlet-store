@@ -39,7 +39,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems,removeFromCart,  
   
 
   return (
-    <div className=" lg:border lg:rounded-lg p-4 lg:mx-32 mx-2 lg:shadow-md">
+    <div className=" lg:border lg:rounded-lg p-2 lg:mx-32  lg:shadow-md">
             <div className='flex justify-between'>
 
               <h1 className='text-black'>
