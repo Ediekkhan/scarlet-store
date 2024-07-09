@@ -35,11 +35,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems,removeFromCart,  
     0
   );
 
- 
-
   const totalItems = cartItems.reduce((acc, item) => acc + (quantities[item.id] || 0), 0);
-
-
   
 
   return (
@@ -71,7 +67,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems,removeFromCart,  
                   
 
 
-      <h2 className="text-lg font-bold mb-4">Shopping Cart</h2>
+      {/* <h2 className="text-lg font-bold mb-4">Shopping Cart</h2> */}
       {cartItems.length === 0 ? (
         <p className="text-gray-700">Your cart is empty.</p>
       ) : (
@@ -84,8 +80,8 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ cartItems,removeFromCart,  
               updateQuantity={updateQuantity}
             />
           ))}
-          <div className="flex justify-between items-center mt-4">
-            <div>
+          <div className="flex  w-auto justify-between items-center mt-4">
+            <div >
               <span className="font-bold mx-2 text-sm">Total:</span>
               <span className='flex text-xl items-center mx-2'>
                 <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -97,9 +97,7 @@ const App: React.FC = () => {
                   
                 </span>
 
-                <div className=' items-end'>
                   
-                  </div>
                 </div>
                 <ShoppingCart cartItems={cart} removeFromCart={removeFromCart} clearCart={clearCart} />
               </div>
