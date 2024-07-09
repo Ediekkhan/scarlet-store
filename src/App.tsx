@@ -77,8 +77,8 @@ const App: React.FC = () => {
             path="/cart"
             element={
               <div >
-                <div className='flex items-center justify-between mx-32'>
-                <span className="flex items-center text-xl font-semibold z my-4">
+                <div className='flex items-center justify-between lg:mx-32 mx-5'>
+                <span className="flex items-center lg:text-xl  font-semibold  lg:my-4 my-2">
                   Product
                   <svg
                     width="20"
@@ -92,7 +92,7 @@ const App: React.FC = () => {
                       fill="#929292"
                     />
                   </svg>
-                  <span className="text-[#D95F27]">cart</span>
+                  <span className="text-[#D95F27] underline underline-offset-2">cart</span>
 
                   
                 </span>
